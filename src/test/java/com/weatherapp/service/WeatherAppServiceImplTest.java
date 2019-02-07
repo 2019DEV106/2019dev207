@@ -53,5 +53,14 @@ public class WeatherAppServiceImplTest {
 		 
 	}
 
+	
+	@Test(expected=WeatherException.class)
+	public void testIncorrectJsonResponse() throws Exception {
+		ResponseEntity<String> response = new ResponseEntity<String>("not a json", HttpStatus.OK);
+		when(restTemplate.getForEntity(WeatherAppService.BRUSSELS_WHEATHER, String.class))
+		.thenReturn(response);
+		weatherAppService.fetchweatherInfo();
+		
+	}
 
 }
