@@ -68,5 +68,15 @@ public class WeatherAppControllerTest {
 		assertEquals("Brussels", ((WeatherData) modelMap.get("weatherData")).getName());
 		verify(weatherAppServiceImplMock, times(1)).fetchweatherInfo();
 	}
+	
+	@Test
+	public void testnavigateWeatherInfoPage_responseIsNull() throws Exception{
+		when(weatherAppServiceImplMock.fetchweatherInfo()).thenReturn(null);
+		ModelMap modelMap = new ModelMap();
+		String result = weatherAppController.navigateWeatherInfoPage(modelMap);
+		assertEquals("weatherInfo", result);
+		assertNull(modelMap.get("weatherData"));
+		verify(weatherAppServiceImplMock, times(1)).fetchweatherInfo();
+	}
 }
 	
