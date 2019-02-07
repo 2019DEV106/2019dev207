@@ -7,7 +7,7 @@ public class WeatherData
     private String dt;
 
     @JsonProperty("coord")
-    private Coord coord;
+    private CoordinatesDetails coordinatesDetails;
 
     private String visibility;
 
@@ -16,14 +16,16 @@ public class WeatherData
     private String name;
 
     private String cod;
+    
+    @JsonProperty("main")
+    private WeatherDetails weatherDetails;
 
-    private Main main;
-
-    private Clouds clouds;
+	private Clouds clouds;
 
     private String id;
-
-    private Sys sys;
+    
+    @JsonProperty("sys")
+    private WeatherType weatherType;
 
     private String base;
 
@@ -37,16 +39,6 @@ public class WeatherData
     public void setDt (String dt)
     {
         this.dt = dt;
-    }
-
-    public Coord getCoord ()
-    {
-        return coord;
-    }
-
-    public void setCoord (Coord coord)
-    {
-        this.coord = coord;
     }
 
     public String getVisibility ()
@@ -79,7 +71,15 @@ public class WeatherData
         this.name = name;
     }
 
-    public String getCod ()
+    public CoordinatesDetails getCoordinatesDetails() {
+		return coordinatesDetails;
+	}
+
+	public void setCoordinatesDetails(CoordinatesDetails coordinatesDetails) {
+		this.coordinatesDetails = coordinatesDetails;
+	}
+
+	public String getCod ()
     {
         return cod;
     }
@@ -88,17 +88,7 @@ public class WeatherData
     {
         this.cod = cod;
     }
-
-    public Main getMain ()
-    {
-        return main;
-    }
-
-    public void setMain (Main main)
-    {
-        this.main = main;
-    }
-
+ 
     public Clouds getClouds ()
     {
         return clouds;
@@ -119,15 +109,7 @@ public class WeatherData
         this.id = id;
     }
 
-    public Sys getSys ()
-    {
-        return sys;
-    }
-
-    public void setSys (Sys sys)
-    {
-        this.sys = sys;
-    }
+     
 
     public String getBase ()
     {
@@ -149,10 +131,21 @@ public class WeatherData
         this.wind = wind;
     }
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [dt = "+dt+", coord = "+coord+", visibility = "+visibility+", weather = "+weather+", name = "+name+", cod = "+cod+", main = "+main+", clouds = "+clouds+", id = "+id+", sys = "+sys+", base = "+base+", wind = "+wind+"]";
-    }
+    public WeatherDetails getWeatherDetails() {
+		return weatherDetails;
+	}
+
+	public void setWeatherDetails(WeatherDetails weatherDetails) {
+		this.weatherDetails = weatherDetails;
+	}
+
+	public WeatherType getWeatherType() {
+		return weatherType;
+	}
+
+	public void setWeatherType(WeatherType weatherType) {
+		this.weatherType = weatherType;
+	}
+   
 }
 		

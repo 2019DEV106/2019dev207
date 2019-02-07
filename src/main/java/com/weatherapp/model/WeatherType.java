@@ -1,6 +1,6 @@
 package com.weatherapp.model;
                
-public class Sys
+public class WeatherType
 {
     private String country;
 
@@ -74,9 +74,4 @@ public class Sys
         this.message = message;
     }
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [country = "+country+", sunrise = "+sunrise+", sunset = "+sunset+", id = "+id+", type = "+type+", message = "+message+"]";
-    }
 }

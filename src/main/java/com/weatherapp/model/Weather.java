@@ -50,10 +50,5 @@ public class Weather
         this.id = id;
     }
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [icon = "+icon+", description = "+description+", main = "+main+", id = "+id+"]";
-    }
 }
 			

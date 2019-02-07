@@ -1,6 +1,6 @@
 package com.weatherapp.model;
                  
-public class Coord
+public class CoordinatesDetails
 {
     private String lon;
 

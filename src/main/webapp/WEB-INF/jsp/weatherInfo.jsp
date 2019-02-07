@@ -24,30 +24,30 @@
 		<tbody>
 			<tr>
 				<td>humidity</td>
-				<td>${weatherData.main.humidity}</td>
+				<td>${weatherData.weatherDetails.humidity}</td>
 			</tr>
 			<tr>
 				<td>pressure</td>
-				<td>${weatherData.main.pressure}</td>
+				<td>${weatherData.weatherDetails.pressure}</td>
 			</tr>
 			<tr>
 				<td>temp</td>
-				<td>${weatherData.main.temp}</td>
+				<td>${weatherData.weatherDetails.temp}</td>
 			</tr>
 			<tr>
 				<td>temp_max</td>
-				<td>${weatherData.main.tempMax}</td>
+				<td>${weatherData.weatherDetails.tempMax}</td>
 			</tr>
 			<tr>
 				<td>temp_min</td>
-				<td>${weatherData.main.tempMin}</td>
+				<td>${weatherData.weatherDetails.tempMin}</td>
 			</tr>
 			<tr>
 				<td>Wind Speed</td>
 				<td>${weatherData.wind.speed}</td>
 			</tr>
 		</tbody>
-	</table>
+	</table> 
 	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
 	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>

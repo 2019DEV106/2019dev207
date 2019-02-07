@@ -2,7 +2,7 @@ package com.weatherapp.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Main
+public class WeatherDetails
 {
     private String temp;
     
@@ -10,7 +10,7 @@ public class Main
     private String tempMin;
     
     private String humidity;
-    
+     
     private String pressure;
 
     @JsonProperty("temp_max")
