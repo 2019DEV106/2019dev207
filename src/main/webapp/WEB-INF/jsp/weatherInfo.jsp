@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
 <html>
 <head>
 <title>Weather Application</title>
@@ -16,7 +17,7 @@
 <body>
 	<table class="table table-striped">
 		<caption>
-			<b>Brussels wheather</b>
+			<strong>Brussels wheather</strong>
 		</caption>
 		<thead>
 		</thead>
@@ -35,11 +36,11 @@
 			</tr>
 			<tr>
 				<td>temp_max</td>
-				<td>${weatherData.main.temp_max}</td>
+				<td>${weatherData.main.tempMax}</td>
 			</tr>
 			<tr>
 				<td>temp_min</td>
-				<td>${weatherData.main.temp_min}</td>
+				<td>${weatherData.main.tempMin}</td>
 			</tr>
 			<tr>
 				<td>Wind Speed</td>
