@@ -1,71 +1,61 @@
 package com.weatherapp.model;
-                
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Main
 {
     private String temp;
-
-    private String temp_min;
-
+    
+    @JsonProperty("temp_min")
+    private String tempMin;
+    
     private String humidity;
-
+    
     private String pressure;
 
-    private String temp_max;
+    @JsonProperty("temp_max")
+    private String tempMax;
 
-    public String getTemp ()
-    {
-        return temp;
-    }
+	public String getTemp() {
+		return temp;
+	}
 
-    public void setTemp (String temp)
-    {
-        this.temp = temp;
-    }
+	public void setTemp(String temp) {
+		this.temp = temp;
+	}
 
-    public String getTemp_min ()
-    {
-        return temp_min;
-    }
+	public String getTempMin() {
+		return tempMin;
+	}
 
-    public void setTemp_min (String temp_min)
-    {
-        this.temp_min = temp_min;
-    }
+	public void setTempMin(String tempMin) {
+		this.tempMin = tempMin;
+	}
 
-    public String getHumidity ()
-    {
-        return humidity;
-    }
+	public String getHumidity() {
+		return humidity;
+	}
 
-    public void setHumidity (String humidity)
-    {
-        this.humidity = humidity;
-    }
+	public void setHumidity(String humidity) {
+		this.humidity = humidity;
+	}
 
-    public String getPressure ()
-    {
-        return pressure;
-    }
+	public String getPressure() {
+		return pressure;
+	}
 
-    public void setPressure (String pressure)
-    {
-        this.pressure = pressure;
-    }
+	public void setPressure(String pressure) {
+		this.pressure = pressure;
+	}
 
-    public String getTemp_max ()
-    {
-        return temp_max;
-    }
+	public String getTempMax() {
+		return tempMax;
+	}
 
-    public void setTemp_max (String temp_max)
-    {
-        this.temp_max = temp_max;
-    }
+	public void setTempMax(String tempMax) {
+		this.tempMax = tempMax;
+	}
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [temp = "+temp+", temp_min = "+temp_min+", humidity = "+humidity+", pressure = "+pressure+", temp_max = "+temp_max+"]";
-    }
+     
 }
 			
