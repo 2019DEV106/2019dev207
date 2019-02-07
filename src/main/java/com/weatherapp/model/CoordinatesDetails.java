@@ -25,10 +25,5 @@ public class CoordinatesDetails
     {
         this.lat = lat;
     }
-
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [lon = "+lon+", lat = "+lat+"]";
-    }
+ 
 }

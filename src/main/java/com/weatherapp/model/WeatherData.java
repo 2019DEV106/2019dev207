@@ -109,8 +109,6 @@ public class WeatherData
         this.id = id;
     }
 
-     
-
     public String getBase ()
     {
         return base;
