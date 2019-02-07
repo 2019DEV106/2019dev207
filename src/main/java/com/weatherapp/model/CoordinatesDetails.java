@@ -1,29 +1,31 @@
 package com.weatherapp.model;
-                 
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class CoordinatesDetails
 {
-    private String lon;
+	@JsonProperty("lon")
+    private String longitude;
+	
+    @JsonProperty("lat")
+    private String latitude;
 
-    private String lat;
+	public String getLongitude() {
+		return longitude;
+	}
 
-    public String getLon ()
-    {
-        return lon;
-    }
+	public void setLongitude(String longitude) {
+		this.longitude = longitude;
+	}
 
-    public void setLon (String lon)
-    {
-        this.lon = lon;
-    }
+	public String getLatitude() {
+		return latitude;
+	}
 
-    public String getLat ()
-    {
-        return lat;
-    }
+	public void setLatitude(String latitude) {
+		this.latitude = latitude;
+	}
 
-    public void setLat (String lat)
-    {
-        this.lat = lat;
-    }
+     
  
 }
