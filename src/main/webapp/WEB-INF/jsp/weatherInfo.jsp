@@ -11,7 +11,7 @@
 .table {
 	width: 40%;
 }
-</style>
+</style> 
 
 </head>
 <body>
